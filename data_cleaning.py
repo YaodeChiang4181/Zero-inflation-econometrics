@@ -68,8 +68,9 @@ df_firm['year'] = df_firm['year'].astype(int)
 # 2. 樣本篩選（排除金融業與異常樣本）
 # ==========================================
 print("[Step 2/5] 正在進行製造業樣本篩選...")
-exclude_ind = ['金融保險業', '金融業', '建材營造', '建材營造業', '油電燃氣業', '公用事業', '證券業']
-df_clean = df_firm[~df_firm['industry'].isin(exclude_ind)].copy()
+# 排除金融保險業 (TEJ 代碼 28 開頭)、建材營造業 (TEJ 代碼 25 開頭)
+df_firm['industry'] = df_firm['industry'].astype(str)
+df_clean = df_firm[~df_firm['industry'].str.startswith(('28', '25'))].copy()
 
 # 排除資產或資本支出小於等於 0 的不合規樣本
 df_clean = df_clean[(df_clean['assets'] > 0) & (df_clean['capx'] > 0)].copy()

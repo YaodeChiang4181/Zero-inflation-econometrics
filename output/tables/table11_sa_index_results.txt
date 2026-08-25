@@ -1,153 +1,153 @@
 === (1) 微觀 SA Index 對營業毛利率之交乘結果 ===
                           PanelOLS Estimation Summary                           
 ================================================================================
-Dep. Variable:           gross_margin   R-squared:                        0.0289
-Estimator:                   PanelOLS   R-squared (Between):              0.0299
-No. Observations:               22058   R-squared (Within):               0.0334
-Date:                Tue, Aug 25 2026   R-squared (Overall):              0.0318
-Time:                        22:20:19   Log-likelihood                -7.768e+04
+Dep. Variable:           gross_margin   R-squared:                        0.0331
+Estimator:                   PanelOLS   R-squared (Between):              0.0282
+No. Observations:               20996   R-squared (Within):               0.0373
+Date:                Tue, Aug 25 2026   R-squared (Overall):              0.0307
+Time:                        22:26:11   Log-likelihood                -7.285e+04
 Cov. Estimator:             Clustered                                           
-                                        F-statistic:                      99.837
-Entities:                        1940   P-value                           0.0000
-Avg Obs:                       11.370   Distribution:                 F(6,20100)
+                                        F-statistic:                      109.19
+Entities:                        1856   P-value                           0.0000
+Avg Obs:                       11.312   Distribution:                 F(6,19122)
 Min Obs:                       1.0000                                           
-Max Obs:                       13.000   F-statistic (robust):             15.096
+Max Obs:                       13.000   F-statistic (robust):             16.881
                                         P-value                           0.0000
-Time periods:                      13   Distribution:                 F(6,20100)
-Avg Obs:                       1696.8                                           
-Min Obs:                       1451.0                                           
-Max Obs:                       1910.0                                           
+Time periods:                      13   Distribution:                 F(6,19122)
+Avg Obs:                       1615.1                                           
+Min Obs:                       1392.0                                           
+Max Obs:                       1813.0                                           
                                                                                 
                                 Parameter Estimates                                 
 ====================================================================================
                   Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
 ------------------------------------------------------------------------------------
-Intercept           -21.089     14.659    -1.4387     0.1503     -49.822      7.6435
-inter_sa_lag2        0.5939     0.4996     1.1887     0.2346     -0.3854      1.5733
-sa_index_lag2       -5.9734     1.4466    -4.1293     0.0000     -8.8089     -3.1379
-size_lag1            2.6836     0.8260     3.2489     0.0012      1.0645      4.3026
-cash_ratio_lag1      5.1518     1.5258     3.3765     0.0007      2.1612      8.1425
-tangibility_lag1    -11.296     2.2424    -5.0375     0.0000     -15.692     -6.9009
-leverage_lag1       -4.3815     1.3681    -3.2027     0.0014     -7.0631     -1.7000
+Intercept           -27.977     12.359    -2.2636     0.0236     -52.203     -3.7511
+inter_sa_lag2        0.1634     0.3460     0.4723     0.6367     -0.5148      0.8417
+sa_index_lag2       -7.5996     1.1552    -6.5788     0.0000     -9.8638     -5.3354
+size_lag1            2.9272     0.7216     4.0565     0.0001      1.5128      4.3416
+cash_ratio_lag1      4.8311     1.5583     3.1003     0.0019      1.7767      7.8854
+tangibility_lag1    -9.0079     2.3538    -3.8270     0.0001     -13.622     -4.3943
+leverage_lag1       -4.4144     1.6944    -2.6053     0.0092     -7.7356     -1.0933
 ====================================================================================
 
-F-test for Poolability: 38.589
+F-test for Poolability: 42.211
 P-value: 0.0000
-Distribution: F(1951,20100)
+Distribution: F(1867,19122)
 
 Included effects: Entity, Time
 
 === (2) 微觀 SA Index 對研發支出之交乘結果 ===
                           PanelOLS Estimation Summary                           
 ================================================================================
-Dep. Variable:                 log_rd   R-squared:                        0.1944
-Estimator:                   PanelOLS   R-squared (Between):              0.3444
-No. Observations:               17379   R-squared (Within):               0.2415
-Date:                Tue, Aug 25 2026   R-squared (Overall):              0.3722
-Time:                        22:20:19   Log-likelihood                -1.091e+04
+Dep. Variable:                 log_rd   R-squared:                        0.2036
+Estimator:                   PanelOLS   R-squared (Between):              0.3592
+No. Observations:               17248   R-squared (Within):               0.2530
+Date:                Tue, Aug 25 2026   R-squared (Overall):              0.3873
+Time:                        22:26:11   Log-likelihood                -1.054e+04
 Cov. Estimator:             Clustered                                           
-                                        F-statistic:                      633.48
-Entities:                        1608   P-value                           0.0000
-Avg Obs:                       10.808   Distribution:                 F(6,15753)
+                                        F-statistic:                      665.94
+Entities:                        1596   P-value                           0.0000
+Avg Obs:                       10.807   Distribution:                 F(6,15634)
 Min Obs:                       1.0000                                           
-Max Obs:                       13.000   F-statistic (robust):             83.880
+Max Obs:                       13.000   F-statistic (robust):             88.171
                                         P-value                           0.0000
-Time periods:                      13   Distribution:                 F(6,15753)
-Avg Obs:                       1336.8                                           
-Min Obs:                       1140.0                                           
-Max Obs:                       1523.0                                           
+Time periods:                      13   Distribution:                 F(6,15634)
+Avg Obs:                       1326.8                                           
+Min Obs:                       1134.0                                           
+Max Obs:                       1513.0                                           
                                                                                 
                                 Parameter Estimates                                 
 ====================================================================================
                   Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
 ------------------------------------------------------------------------------------
-Intercept            1.8741     0.9029     2.0756     0.0380      0.1042      3.6439
-inter_sa_lag2       -0.0299     0.0212    -1.4080     0.1591     -0.0715      0.0117
-sa_index_lag2        0.1484     0.0734     2.0220     0.0432      0.0045      0.2923
-size_lag1            0.6359     0.0530     12.005     0.0000      0.5321      0.7397
-cash_ratio_lag1      0.0318     0.0904     0.3519     0.7249     -0.1454      0.2090
-tangibility_lag1     0.1381     0.1789     0.7719     0.4402     -0.2125      0.4887
-leverage_lag1       -0.2743     0.1144    -2.3973     0.0165     -0.4986     -0.0500
+Intercept            1.8024     0.8874     2.0310     0.0423      0.0629      3.5419
+inter_sa_lag2       -0.0284     0.0221    -1.2893     0.1973     -0.0717      0.0148
+sa_index_lag2        0.1428     0.0706     2.0239     0.0430      0.0045      0.2811
+size_lag1            0.6428     0.0521     12.339     0.0000      0.5407      0.7449
+cash_ratio_lag1      0.0181     0.0882     0.2055     0.8372     -0.1548      0.1911
+tangibility_lag1     0.1111     0.1754     0.6336     0.5264     -0.2327      0.4549
+leverage_lag1       -0.2651     0.1113    -2.3821     0.0172     -0.4833     -0.0470
 ====================================================================================
 
-F-test for Poolability: 69.932
+F-test for Poolability: 69.220
 P-value: 0.0000
-Distribution: F(1619,15753)
+Distribution: F(1607,15634)
 
 Included effects: Entity, Time
 
 === (3a) 高融資約束組 (High SA Firms: 小型/年輕) ===
                           PanelOLS Estimation Summary                           
 ================================================================================
-Dep. Variable:           gross_margin   R-squared:                        0.0281
-Estimator:                   PanelOLS   R-squared (Between):              0.0369
-No. Observations:               11029   R-squared (Within):               0.0320
-Date:                Tue, Aug 25 2026   R-squared (Overall):              0.0237
-Time:                        22:20:19   Log-likelihood                -3.631e+04
+Dep. Variable:           gross_margin   R-squared:                        0.0179
+Estimator:                   PanelOLS   R-squared (Between):              0.0536
+No. Observations:               10498   R-squared (Within):               0.0197
+Date:                Tue, Aug 25 2026   R-squared (Overall):              0.0403
+Time:                        22:26:12   Log-likelihood                -3.476e+04
 Cov. Estimator:             Clustered                                           
-                                        F-statistic:                      56.545
-Entities:                        1247   P-value                           0.0000
-Avg Obs:                       8.8444   Distribution:                  F(5,9765)
+                                        F-statistic:                      33.794
+Entities:                        1193   P-value                           0.0000
+Avg Obs:                       8.7997   Distribution:                  F(5,9288)
 Min Obs:                       1.0000                                           
-Max Obs:                       13.000   F-statistic (robust):             13.084
+Max Obs:                       13.000   F-statistic (robust):             5.6908
                                         P-value                           0.0000
-Time periods:                      13   Distribution:                  F(5,9765)
-Avg Obs:                       848.38                                           
-Min Obs:                       755.00                                           
-Max Obs:                       970.00                                           
+Time periods:                      13   Distribution:                  F(5,9288)
+Avg Obs:                       807.54                                           
+Min Obs:                       724.00                                           
+Max Obs:                       927.00                                           
                                                                                 
                                 Parameter Estimates                                 
 ====================================================================================
                   Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
 ------------------------------------------------------------------------------------
-Intercept            14.272     10.671     1.3374     0.1811     -6.6458      35.189
-inter_lag2          -0.0450     0.0692    -0.6505     0.5154     -0.1808      0.0907
-size_lag1            0.9197     0.6825     1.3476     0.1778     -0.4181      2.2575
-cash_ratio_lag1      4.9511     2.0383     2.4290     0.0152      0.9556      8.9466
-tangibility_lag1    -14.933     2.8815    -5.1822     0.0000     -20.581     -9.2843
-leverage_lag1       -4.9169     1.9029    -2.5840     0.0098     -8.6469     -1.1869
+Intercept            29.488     12.895     2.2867     0.0222      4.2103      54.765
+inter_lag2          -0.0499     0.2393    -0.2086     0.8347     -0.5190      0.4191
+size_lag1           -0.1456     0.8764    -0.1662     0.8680     -1.8636      1.5723
+cash_ratio_lag1      5.4797     2.0066     2.7309     0.0063      1.5464      9.4130
+tangibility_lag1    -10.755     3.8151    -2.8191     0.0048     -18.234     -3.2767
+leverage_lag1       -3.0341     3.3568    -0.9039     0.3661     -9.6142      3.5460
 ====================================================================================
 
-F-test for Poolability: 42.475
+F-test for Poolability: 40.062
 P-value: 0.0000
-Distribution: F(1258,9765)
+Distribution: F(1204,9288)
 
 Included effects: Entity, Time
 
 === (3b) 低融資約束組 (Low SA Firms: 大型/成熟) ===
                           PanelOLS Estimation Summary                           
 ================================================================================
-Dep. Variable:           gross_margin   R-squared:                        0.0151
-Estimator:                   PanelOLS   R-squared (Between):              0.0643
-No. Observations:               11029   R-squared (Within):               0.0154
-Date:                Tue, Aug 25 2026   R-squared (Overall):              0.0554
-Time:                        22:20:19   Log-likelihood                -4.003e+04
+Dep. Variable:           gross_margin   R-squared:                        0.0158
+Estimator:                   PanelOLS   R-squared (Between):              0.0719
+No. Observations:               10498   R-squared (Within):               0.0147
+Date:                Tue, Aug 25 2026   R-squared (Overall):              0.0644
+Time:                        22:26:12   Log-likelihood                -3.704e+04
 Cov. Estimator:             Clustered                                           
-                                        F-statistic:                      29.684
-Entities:                        1304   P-value                           0.0000
-Avg Obs:                       8.4578   Distribution:                  F(5,9708)
+                                        F-statistic:                      29.687
+Entities:                        1252   P-value                           0.0000
+Avg Obs:                       8.3850   Distribution:                  F(5,9229)
 Min Obs:                       1.0000                                           
-Max Obs:                       13.000   F-statistic (robust):             5.5946
-                                        P-value                           0.0000
-Time periods:                      13   Distribution:                  F(5,9708)
-Avg Obs:                       848.38                                           
-Min Obs:                       696.00                                           
-Max Obs:                       963.00                                           
+Max Obs:                       13.000   F-statistic (robust):             4.3627
+                                        P-value                           0.0006
+Time periods:                      13   Distribution:                  F(5,9229)
+Avg Obs:                       807.54                                           
+Min Obs:                       668.00                                           
+Max Obs:                       915.00                                           
                                                                                 
                                 Parameter Estimates                                 
 ====================================================================================
                   Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
 ------------------------------------------------------------------------------------
-Intercept            32.132     10.086     3.1857     0.0014      12.360      51.903
-inter_lag2           0.1083     0.0624     1.7346     0.0829     -0.0141      0.2306
-size_lag1           -0.1858     0.7066    -0.2630     0.7926     -1.5708      1.1992
-cash_ratio_lag1      6.2737     2.1229     2.9552     0.0031      2.1123      10.435
-tangibility_lag1    -9.1598     3.2408    -2.8264     0.0047     -15.512     -2.8072
-leverage_lag1       -2.1326     1.9307    -1.1046     0.2694     -5.9172      1.6520
+Intercept            38.062     10.888     3.4959     0.0005      16.720      59.405
+inter_lag2          -0.2915     0.3258    -0.8947     0.3710     -0.9301      0.3471
+size_lag1           -0.6071     0.7651    -0.7935     0.4275     -2.1068      0.8926
+cash_ratio_lag1      6.0793     2.1415     2.8388     0.0045      1.8815      10.277
+tangibility_lag1    -7.5535     3.2463    -2.3268     0.0200     -13.917     -1.1900
+leverage_lag1       -2.5585     1.9897    -1.2859     0.1985     -6.4586      1.3417
 ====================================================================================
 
-F-test for Poolability: 24.269
+F-test for Poolability: 29.614
 P-value: 0.0000
-Distribution: F(1315,9708)
+Distribution: F(1263,9229)
 
 Included effects: Entity, Time
