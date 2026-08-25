@@ -6,7 +6,7 @@ from scipy.stats.mstats import winsorize
 # ==========================================
 # 0. 環境路徑設定
 # ==========================================
-RAW_FIRM_PATH = 'data/raw/raw_firm_panel.csv'
+RAW_FIRM_PATH = 'data/raw/20260825213148DataExport.csv'
 RAW_MACRO_PATH = 'data/raw/raw_macro_rate.csv'
 OUTPUT_PATH = 'data/processed/clean_panel.csv'
 
@@ -25,25 +25,27 @@ except UnicodeDecodeError:
 # 去除所有欄位名稱的頭尾空白
 df_firm.columns = df_firm.columns.str.strip()
 
-# 欄位名稱對照表（依 TEJ 實際欄位名稱自動適配）
+# 欄位映射
 rename_dict = {
-    '公司代碼': 'firm_id', '代號': 'firm_id',
-    '公司簡稱': 'firm_name', '名稱': 'firm_name',
-    '年月日': 'date', '年/月': 'date',
+    '公司代碼': 'firm_id', '代號': 'firm_id', '公司': 'firm_id',
+    '公司簡稱': 'firm_name', '名稱': 'firm_name', '簡稱': 'firm_name',
+    '年月日': 'date', '年/月': 'date', '年月/日': 'date',
     'TSE產業別': 'industry', 'TEJ產業名': 'industry', 'TEJ主產業代碼': 'industry',
     '研究發展費用': 'rd_exp', '研究發展費': 'rd_exp',
-    '購置不動產廠房設備': 'capx', '購置不動產廠房設備（含預付）－CFI': 'capx',
-    '來自營運之現金流量': 'oancf',
+    '購置不動產廠房設備': 'capx', '購置不動產廠房設備（含預付）－CFI': 'capx', '購置不動產廠房設備－CFI': 'capx',
+    '來自營運之現金流量': 'oancf', '營業活動現金流量': 'oancf',
     '資產總額': 'assets',
     '不動產廠房及設備淨額': 'ppe', '不動產廠房及設備': 'ppe',
     '現金及約當現金': 'cash',
     '負債總額': 'debt',
-    '期末市值': 'mkt_cap', '市值': 'mkt_cap', '季底普通股市值': 'mkt_cap'
+    '期末市值': 'mkt_cap', '市值': 'mkt_cap', '季底普通股市值': 'mkt_cap', '期底普通股市值': 'mkt_cap',
+    '營業毛利率': 'gross_margin',
+    '營業利益率': 'op_margin'
 }
 df_firm = df_firm.rename(columns={k: v for k, v in rename_dict.items() if k in df_firm.columns})
 
 # 清理數值欄位中的逗號與缺失字元
-numeric_cols = ['rd_exp', 'capx', 'oancf', 'assets', 'ppe', 'cash', 'debt', 'mkt_cap']
+numeric_cols = ['rd_exp', 'capx', 'oancf', 'assets', 'ppe', 'cash', 'debt', 'mkt_cap', 'gross_margin', 'op_margin']
 for col in numeric_cols:
     if col in df_firm.columns:
         df_firm[col] = df_firm[col].astype(str).str.replace(',', '').str.strip()
