@@ -1,16 +1,16 @@
                           PanelOLS Estimation Summary                           
 ================================================================================
-Dep. Variable:                 log_rd   R-squared:                        0.0417
-Estimator:                   PanelOLS   R-squared (Between):             -0.0419
+Dep. Variable:                 log_rd   R-squared:                        0.0416
+Estimator:                   PanelOLS   R-squared (Between):             -0.0424
 No. Observations:               26349   R-squared (Within):               0.0577
-Date:                Tue, Aug 25 2026   R-squared (Overall):             -0.0340
-Time:                        17:20:32   Log-likelihood                -4.644e+04
+Date:                Tue, Aug 25 2026   R-squared (Overall):             -0.0345
+Time:                        17:32:27   Log-likelihood                -4.644e+04
 Cov. Estimator:             Clustered                                           
-                                        F-statistic:                      211.75
+                                        F-statistic:                      211.17
 Entities:                        1976   P-value                           0.0000
 Avg Obs:                       13.335   Distribution:                 F(5,24354)
 Min Obs:                       1.0000                                           
-Max Obs:                       15.000   F-statistic (robust):             27.707
+Max Obs:                       15.000   F-statistic (robust):             27.802
                                         P-value                           0.0000
 Time periods:                      15   Distribution:                 F(5,24354)
 Avg Obs:                       1756.6                                           
@@ -21,15 +21,15 @@ Max Obs:                       1946.0
 ======================================================================================
                     Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
 --------------------------------------------------------------------------------------
-Intercept             -2.9042     1.0993    -2.6419     0.0082     -5.0588     -0.7496
-inter_tight_findep  1.489e-08  2.916e-08     0.5107     0.6096  -4.226e-08   7.205e-08
-size                   0.7578     0.0725     10.449     0.0000      0.6156      0.9000
-cash_ratio             0.2772     0.2368     1.1703     0.2419     -0.1870      0.7413
-tangibility            1.2925     0.3216     4.0190     0.0001      0.6621      1.9228
-leverage              -0.9874     0.2339    -4.2210     0.0000     -1.4459     -0.5289
+Intercept             -2.9302     1.1006    -2.6625     0.0078     -5.0874     -0.7730
+inter_tight_findep    -0.0021     0.0094    -0.2259     0.8212     -0.0206      0.0164
+size                   0.7589     0.0726     10.458     0.0000      0.6167      0.9012
+cash_ratio             0.2799     0.2365     1.1835     0.2366     -0.1837      0.7435
+tangibility            1.2952     0.3213     4.0306     0.0001      0.6653      1.9250
+leverage              -0.9843     0.2343    -4.2004     0.0000     -1.4436     -0.5250
 ======================================================================================
 
-F-test for Poolability: 121.10
+F-test for Poolability: 121.15
 P-value: 0.0000
 Distribution: F(1989,24354)
 
