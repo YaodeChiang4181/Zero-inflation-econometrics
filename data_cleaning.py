@@ -125,6 +125,9 @@ df_macro = df_macro.rename(columns={k: v for k, v in macro_col_map.items() if k 
 
 df_macro['year'] = pd.to_datetime(df_macro['date'].astype(str), errors='coerce').dt.year
 
+# 將 rate 轉換為數值，避免字串相減錯誤
+df_macro['rate'] = pd.to_numeric(df_macro['rate'].astype(str).str.replace(',', '').str.strip(), errors='coerce')
+
 # 確保在跨年份計算時，使用的是同一個總經指標（取檔案中第一個出現的指標名稱）
 if '名稱' in df_macro.columns:
     indicator_name = df_macro['名稱'].dropna().iloc[0]

@@ -1,0 +1,36 @@
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:                 log_rd   R-squared:                        0.0417
+Estimator:                   PanelOLS   R-squared (Between):             -0.0419
+No. Observations:               26349   R-squared (Within):               0.0577
+Date:                Tue, Aug 25 2026   R-squared (Overall):             -0.0340
+Time:                        17:20:32   Log-likelihood                -4.644e+04
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      211.75
+Entities:                        1976   P-value                           0.0000
+Avg Obs:                       13.335   Distribution:                 F(5,24354)
+Min Obs:                       1.0000                                           
+Max Obs:                       15.000   F-statistic (robust):             27.707
+                                        P-value                           0.0000
+Time periods:                      15   Distribution:                 F(5,24354)
+Avg Obs:                       1756.6                                           
+Min Obs:                       1494.0                                           
+Max Obs:                       1946.0                                           
+                                                                                
+                                 Parameter Estimates                                  
+======================================================================================
+                    Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+--------------------------------------------------------------------------------------
+Intercept             -2.9042     1.0993    -2.6419     0.0082     -5.0588     -0.7496
+inter_tight_findep  1.489e-08  2.916e-08     0.5107     0.6096  -4.226e-08   7.205e-08
+size                   0.7578     0.0725     10.449     0.0000      0.6156      0.9000
+cash_ratio             0.2772     0.2368     1.1703     0.2419     -0.1870      0.7413
+tangibility            1.2925     0.3216     4.0190     0.0001      0.6621      1.9228
+leverage              -0.9874     0.2339    -4.2210     0.0000     -1.4459     -0.5289
+======================================================================================
+
+F-test for Poolability: 121.10
+P-value: 0.0000
+Distribution: F(1989,24354)
+
+Included effects: Entity, Time
