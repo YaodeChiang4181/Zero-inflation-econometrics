@@ -90,7 +90,7 @@ fig, ax = plt.subplots(figsize=(9, 5.5), dpi=300)
 # 繪製估計點與誤差線
 ax.errorbar(tau_labels, coefs, yerr=[np.array(coefs) - np.array(ci_lower), np.array(ci_upper) - np.array(coefs)],
             fmt='o', color='#1f77b4', ecolor='#1f77b4', elinewidth=2, capsize=4, capthick=1.5,
-            markersize=7, label=r'Dynamic Point Estimates ($\hat{\beta}_\tau$ with 95% CI)')
+            markersize=7, label=r'Dynamic Point Estimates ($\hat{\beta}_\tau$ with 95\% CI)')
 
 # 繪製趨勢連結虛線
 ax.plot(tau_labels, coefs, color='#1f77b4', linestyle='--', alpha=0.7)

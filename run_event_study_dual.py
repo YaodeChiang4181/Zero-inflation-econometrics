@@ -85,7 +85,7 @@ fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(15, 6), sharey=True, dpi=300)
 # 子圖 A: 中小型企業組 (受約束組)
 ax1.errorbar(tau_labels, coef_s, yerr=1.96 * se_s, fmt='o', color='#c0392b',
              ecolor='#c0392b', elinewidth=2, capsize=4, capthick=1.5, markersize=7,
-             label=r'Estimates ($\hat{\beta}_\tau$ with 95% CI)')
+             label=r'Estimates ($\hat{\beta}_\tau$ with 95\% CI)')
 ax1.plot(tau_labels, coef_s, color='#c0392b', linestyle='--', alpha=0.7)
 ax1.axhline(0, color='black', linestyle='-', linewidth=0.8, alpha=0.8)
 ax1.axvline(-0.5, color='grey', linestyle=':', linewidth=1.5, label='Shock Timing')
@@ -99,7 +99,7 @@ ax1.legend(frameon=True, facecolor='white', loc='upper left')
 # 子圖 B: 大型企業組 (深口袋組)
 ax2.errorbar(tau_labels, coef_l, yerr=1.96 * se_l, fmt='o', color='#2980b9',
              ecolor='#2980b9', elinewidth=2, capsize=4, capthick=1.5, markersize=7,
-             label=r'Estimates ($\hat{\beta}_\tau$ with 95% CI)')
+             label=r'Estimates ($\hat{\beta}_\tau$ with 95\% CI)')
 ax2.plot(tau_labels, coef_l, color='#2980b9', linestyle='--', alpha=0.7)
 ax2.axhline(0, color='black', linestyle='-', linewidth=0.8, alpha=0.8)
 ax2.axvline(-0.5, color='grey', linestyle=':', linewidth=1.5, label='Shock Timing')
