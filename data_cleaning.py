@@ -49,8 +49,16 @@ for col in numeric_cols:
         df_firm[col] = df_firm[col].astype(str).str.replace(',', '').str.strip()
         df_firm[col] = pd.to_numeric(df_firm[col], errors='coerce')
 
+# TEJ 的投資現金流 (CFI) 資本支出為負值 (流出)，取絕對值轉換為正向規模
+if 'capx' in df_firm.columns:
+    df_firm['capx'] = df_firm['capx'].abs()
+
 # 提取西元年份 (YYYY)
 df_firm['year'] = pd.to_datetime(df_firm['date'].astype(str), errors='coerce').dt.year
+
+# 暫時解決缺少「上市別」的問題：過濾長度恰好為 4 碼的 firm_id（大致對應上市上櫃公司）
+df_firm = df_firm[df_firm['firm_id'].astype(str).str.len() == 4]
+
 df_firm = df_firm.dropna(subset=['firm_id', 'year', 'industry'])
 df_firm['year'] = df_firm['year'].astype(int)
 
