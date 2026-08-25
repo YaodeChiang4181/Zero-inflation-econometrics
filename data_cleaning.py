@@ -17,7 +17,7 @@ os.makedirs('output/tables', exist_ok=True)
 # 1. 讀取並標準化微觀企業財報
 # ==========================================
 print("[Step 1/5] 正在讀取並標準化 TEJ 財報資料...")
-df_firm = pd.read_csv(RAW_FIRM_PATH, encoding='utf-8-sig', dtype={'公司代碼': str, '代號': str})
+df_firm = pd.read_csv(RAW_FIRM_PATH, encoding='cp950', dtype={'公司代碼': str, '代號': str})
 
 # 欄位名稱對照表（依 TEJ 實際欄位名稱自動適配）
 rename_dict = {
@@ -102,7 +102,7 @@ for v in vars_to_winsorize:
 # 5. 合併總體貨幣政策衝擊與交乘項
 # ==========================================
 print("[Step 5/5] 合併宏觀政策利率並生成核心交乘項...")
-df_macro = pd.read_csv(RAW_MACRO_PATH, encoding='utf-8-sig')
+df_macro = pd.read_csv(RAW_MACRO_PATH, encoding='cp950')
 macro_col_map = {'年/月': 'date', '年月日': 'date', '數值': 'rate', '中央銀行重貼現率': 'rate'}
 df_macro = df_macro.rename(columns={k: v for k, v in macro_col_map.items() if k in df_macro.columns})
 
