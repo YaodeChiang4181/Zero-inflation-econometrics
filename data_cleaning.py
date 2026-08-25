@@ -30,7 +30,7 @@ rename_dict = {
     '公司代碼': 'firm_id', '代號': 'firm_id',
     '公司簡稱': 'firm_name', '名稱': 'firm_name',
     '年月日': 'date', '年/月': 'date',
-    'TSE產業別': 'industry', 'TEJ產業名': 'industry',
+    'TSE產業別': 'industry', 'TEJ產業名': 'industry', 'TEJ主產業代碼': 'industry',
     '研究發展費用': 'rd_exp', '研究發展費': 'rd_exp',
     '購置不動產廠房設備': 'capx', '購置不動產廠房設備（含預付）－CFI': 'capx',
     '來自營運之現金流量': 'oancf',
@@ -38,7 +38,7 @@ rename_dict = {
     '不動產廠房及設備淨額': 'ppe', '不動產廠房及設備': 'ppe',
     '現金及約當現金': 'cash',
     '負債總額': 'debt',
-    '期末市值': 'mkt_cap', '市值': 'mkt_cap'
+    '期末市值': 'mkt_cap', '市值': 'mkt_cap', '季底普通股市值': 'mkt_cap'
 }
 df_firm = df_firm.rename(columns={k: v for k, v in rename_dict.items() if k in df_firm.columns})
 
