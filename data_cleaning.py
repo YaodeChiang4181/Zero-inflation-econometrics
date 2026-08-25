@@ -19,17 +19,20 @@ os.makedirs('output/tables', exist_ok=True)
 print("[Step 1/5] 正在讀取並標準化 TEJ 財報資料...")
 df_firm = pd.read_csv(RAW_FIRM_PATH, encoding='cp950', dtype={'公司代碼': str, '代號': str})
 
+# 去除所有欄位名稱的頭尾空白
+df_firm.columns = df_firm.columns.str.strip()
+
 # 欄位名稱對照表（依 TEJ 實際欄位名稱自動適配）
 rename_dict = {
     '公司代碼': 'firm_id', '代號': 'firm_id',
     '公司簡稱': 'firm_name', '名稱': 'firm_name',
     '年月日': 'date', '年/月': 'date',
     'TSE產業別': 'industry', 'TEJ產業名': 'industry',
-    '研究發展費用': 'rd_exp',
-    '購置不動產廠房設備': 'capx',
+    '研究發展費用': 'rd_exp', '研究發展費': 'rd_exp',
+    '購置不動產廠房設備': 'capx', '購置不動產廠房設備（含預付）－CFI': 'capx',
     '來自營運之現金流量': 'oancf',
     '資產總額': 'assets',
-    '不動產廠房及設備淨額': 'ppe',
+    '不動產廠房及設備淨額': 'ppe', '不動產廠房及設備': 'ppe',
     '現金及約當現金': 'cash',
     '負債總額': 'debt',
     '期末市值': 'mkt_cap', '市值': 'mkt_cap'
@@ -103,7 +106,7 @@ for v in vars_to_winsorize:
 # ==========================================
 print("[Step 5/5] 合併宏觀政策利率並生成核心交乘項...")
 df_macro = pd.read_csv(RAW_MACRO_PATH, encoding='cp950')
-macro_col_map = {'年/月': 'date', '年月日': 'date', '數值': 'rate', '中央銀行重貼現率': 'rate'}
+macro_col_map = {'年/月': 'date', '年月': 'date', '年月日': 'date', '數值': 'rate', '中央銀行重貼現率': 'rate'}
 df_macro = df_macro.rename(columns={k: v for k, v in macro_col_map.items() if k in df_macro.columns})
 
 df_macro['year'] = pd.to_datetime(df_macro['date'].astype(str), errors='coerce').dt.year
